@@ -102,7 +102,7 @@ Para futuras versiones del juego se plantean las siguientes mejoras:
  
  
 ## Autor
-**Ludwing Leonel Cuba Condori**  
+**Dustin Fernando Vaca Aguilar**  
 *Estudiante de Game Development.*  
 Este proyecto fue desarrollado como parte de las actividades prácticas de la asignatura *Game Development*.
  
