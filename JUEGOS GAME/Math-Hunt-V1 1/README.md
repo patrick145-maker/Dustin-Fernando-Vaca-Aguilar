@@ -73,7 +73,7 @@ El videojuego fue desarrollado utilizando exclusivamente tecnologías web están
 *(Espacio reservado para la captura de la pantalla final con la puntuación acumulada sobre 10, el mensaje de desempeño y el botón JUGAR DE NUEVO)*
  
  
-![Resultado del juego](images/resultado%del%juego.png)
+![Resultado del juego](images/resultado.png)
  
 ##  Jugar
 🎮 **Jugar Math Hunt: Caza Matemática**  
