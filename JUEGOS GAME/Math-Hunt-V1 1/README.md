@@ -60,20 +60,20 @@ El videojuego fue desarrollado utilizando exclusivamente tecnologías web están
 ###  Pantalla inicial
 *(Espacio reservado para la captura de la pantalla principal con el título "MATH HUNT: CAZA MATEMÁTICA", las instrucciones de juego y el botón COMENZAR AVENTURA)*
  
-![Pantalla inicial](images/inicio.PNG)
+![Pantalla inicial](images/inicio.png)
  
  
 ###  Gameplay (Fase de Caza y Desafío Matemático)
 *(Espacio reservado para las capturas del escenario natural con el ave en movimiento y la ventana pop-up con la operación matemática y sus 4 alternativas)*
  
  
-![Gameplay](images/gameplay.PNG)
+![Gameplay](images/gameplay.png)
  
 ###  Resultado
 *(Espacio reservado para la captura de la pantalla final con la puntuación acumulada sobre 10, el mensaje de desempeño y el botón JUGAR DE NUEVO)*
  
  
-![Resultado del juego](images/resultado.PNG)
+![Resultado del juego](images/resultado%del%juego.png)
  
 ##  Jugar
 🎮 **Jugar Math Hunt: Caza Matemática**  
