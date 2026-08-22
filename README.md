@@ -1,5 +1,5 @@
 <p align="center">
-<img src="assets/images/banner.PNG" alt="Game Development Portfolio" width="100%">
+<img src="/assets/images/banner.jpg" alt="Game Development Portfolio" width="100%">
 </p>
  
 <h1 align="center">🎮 Game Development Portfolio</h1>
@@ -51,7 +51,7 @@ Cada proyecto busca abordar una temática diferente:
 ## 🎮 1. Aventura Matemática: El Reino de los Números
  
 <p align="center">
-<img src="assets/images/aventura-matematica.PNG" alt="Aventura Matemática" width="80%">
+<img src="/assets/images/aventura-matematica.PNG" alt="Aventura Matemática" width="80%">
 </p>
  
 ### 📖 Descripción
