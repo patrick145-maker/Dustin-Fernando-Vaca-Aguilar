@@ -77,7 +77,7 @@ El videojuego fue desarrollado utilizando exclusivamente tecnologías web están
  
 ## Jugar
 🎮 **Jugar Recycling Time: Guardianes del Reciclaje**  
-▶️ **[JUGAR AHORA](https://ludcuba2019-boop.github.io/game-development-portfolio/Recycling-Time-2/)** *(Enlace configurable a GitHub Pages)*
+▶️ **[JUGAR AHORA](https://patrick145-maker.github.io/game-development-portfolio/Recycling-Time-2/)** *(Enlace configurable a GitHub Pages)*
  
 El videojuego puede ejecutarse directamente abriendo el archivo index.html en cualquier navegador web moderno sin necesidad de instalación.
  
