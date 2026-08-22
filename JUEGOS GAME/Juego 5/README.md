@@ -67,7 +67,7 @@ El proyecto se enmarca en el género de ficción interactiva con simulación de 
  
 ## Jugar
 🎮 **Jugar ECO//NADO**  
-▶️ **[JUGAR AHORA](https://ludcuba2019-boop.github.io/game-development-portfolio/ECONADO/?utm_source=chatgpt.com)** *(Enlace configurable a GitHub Pages)*
+▶️ **[JUGAR AHORA](https://patrick145-maker.github.io/game-development-portfolio/ECONADO/?utm_source=chatgpt.com)** *(Enlace configurable a GitHub Pages)*
  
 Para jugar localmente, clona el repositorio o descarga el proyecto y abre el archivo `index.html` en cualquier navegador web moderno.
  
