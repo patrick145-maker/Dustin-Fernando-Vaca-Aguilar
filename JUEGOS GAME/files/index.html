@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recycling Time: Guardianes del Reciclaje</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+
+  <!-- ============================================================ -->
+  <!-- PANTALLA 1 · INICIO                                            -->
+  <!-- ============================================================ -->
+  <section id="screen-start" class="screen active" data-screen="start">
+    <div class="start-glow" aria-hidden="true"></div>
+    <div class="start-content">
+      <p class="eyebrow">Misión planetaria</p>
+      <h1 class="game-title">
+        <span class="title-line">RECYCLING</span>
+        <span class="title-line title-accent">TIME</span>
+      </h1>
+      <p class="game-subtitle">Guardianes del Reciclaje</p>
+
+      <p class="game-description">
+        La Tierra necesita tu ayuda. Clasifica cada residuo en su contenedor correcto
+        antes de que se acabe el tiempo, sube de nivel y conviértete en el mejor
+        <strong>Guardián del Reciclaje</strong> del planeta.
+      </p>
+
+      <ul class="bin-legend" aria-label="Contenedores del juego">
+        <li><span class="legend-dot legend-plastic"></span>Plástico</li>
+        <li><span class="legend-dot legend-paper"></span>Papel y cartón</li>
+        <li><span class="legend-dot legend-glass"></span>Vidrio</li>
+        <li><span class="legend-dot legend-metal"></span>Metal</li>
+        <li><span class="legend-dot legend-organic"></span>Orgánico</li>
+      </ul>
+
+      <button id="btn-start" class="btn-primary" type="button">
+        Comenzar Juego <span class="btn-arrow">→</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PANTALLA 2 · JUEGO                                             -->
+  <!-- ============================================================ -->
+  <section id="screen-game" class="screen" data-screen="game">
+
+    <header class="hud" aria-label="Estado de la partida">
+      <div class="hud-stat">
+        <span class="hud-label">Nivel</span>
+        <span id="hud-level" class="hud-value">1</span>
+        <span id="hud-level-name" class="hud-sublabel">Primeros pasos</span>
+      </div>
+
+      <div class="hud-stat">
+        <span class="hud-label">Puntos</span>
+        <span id="hud-score" class="hud-value hud-score">0</span>
+        <span id="hud-target" class="hud-sublabel">Meta: 60</span>
+      </div>
+
+      <div class="hud-stat hud-timer" id="hud-timer-wrap">
+        <span class="hud-label">Tiempo</span>
+        <span id="hud-time" class="hud-value">60</span>
+        <span class="hud-sublabel">segundos</span>
+      </div>
+
+      <div class="hud-stat">
+        <span class="hud-label">Reciclados</span>
+        <span id="hud-total" class="hud-value">0</span>
+        <span class="hud-sublabel">total</span>
+      </div>
+
+      <div class="hud-lives" id="hud-lives" aria-label="Vidas restantes">
+        <span class="heart" data-life="1">❤️</span>
+        <span class="heart" data-life="2">❤️</span>
+        <span class="heart" data-life="3">❤️</span>
+      </div>
+    </header>
+
+    <div id="level-up-banner" class="level-up-banner" aria-live="polite"></div>
+
+    <main class="game-stage">
+      <div class="waste-card" id="waste-card">
+        <span class="waste-emoji" id="waste-emoji">♻️</span>
+        <span class="waste-name" id="waste-name">Cargando…</span>
+      </div>
+    </main>
+
+    <footer class="bins-row" aria-label="Contenedores de reciclaje">
+      <button class="bin bin-plastic" data-type="plastic" type="button">
+        <span class="bin-lid" aria-hidden="true"></span>
+        <span class="bin-icon" aria-hidden="true">🧴</span>
+        <span class="bin-label">Plástico</span>
+      </button>
+      <button class="bin bin-paper" data-type="paper" type="button">
+        <span class="bin-lid" aria-hidden="true"></span>
+        <span class="bin-icon" aria-hidden="true">📦</span>
+        <span class="bin-label">Papel y Cartón</span>
+      </button>
+      <button class="bin bin-glass" data-type="glass" type="button">
+        <span class="bin-lid" aria-hidden="true"></span>
+        <span class="bin-icon" aria-hidden="true">🍾</span>
+        <span class="bin-label">Vidrio</span>
+      </button>
+      <button class="bin bin-metal" data-type="metal" type="button">
+        <span class="bin-lid" aria-hidden="true"></span>
+        <span class="bin-icon" aria-hidden="true">🥫</span>
+        <span class="bin-label">Metal</span>
+      </button>
+      <button class="bin bin-organic" data-type="organic" type="button">
+        <span class="bin-lid" aria-hidden="true"></span>
+        <span class="bin-icon" aria-hidden="true">🍌</span>
+        <span class="bin-label">Orgánico</span>
+      </button>
+    </footer>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PANTALLA 3 · FINAL                                             -->
+  <!-- ============================================================ -->
+  <section id="screen-end" class="screen" data-screen="end">
+    <div class="end-content">
+      <p class="end-emoji" id="end-emoji">🌍</p>
+      <h2 id="end-title" class="end-title">¡Planeta a salvo!</h2>
+      <p id="end-subtitle" class="end-subtitle">Resumen de tu misión</p>
+
+      <div class="end-stats">
+        <div class="end-stat">
+          <span id="end-score" class="end-stat-value">0</span>
+          <span class="end-stat-label">Puntos totales</span>
+        </div>
+        <div class="end-stat">
+          <span id="end-level" class="end-stat-value">1</span>
+          <span class="end-stat-label">Nivel alcanzado</span>
+        </div>
+        <div class="end-stat">
+          <span id="end-recycled" class="end-stat-value">0</span>
+          <span class="end-stat-label">Residuos reciclados</span>
+        </div>
+      </div>
+
+      <div class="end-message">
+        <p id="end-education-text">
+          Reciclar correctamente reduce la contaminación, ahorra energía y le da
+          una segunda vida a los materiales. ¡Cada residuo bien clasificado cuenta!
+        </p>
+      </div>
+
+      <button id="btn-restart" class="btn-primary" type="button">
+        Jugar de nuevo <span class="btn-arrow">↺</span>
+      </button>
+    </div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

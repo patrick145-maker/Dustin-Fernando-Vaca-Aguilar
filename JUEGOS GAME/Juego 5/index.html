@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ECO//NADO</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="game">
+
+    <!-- =========================
+         BARRA SUPERIOR
+    ========================== -->
+
+    <header id="topBar">
+
+        <div class="logo">
+            ECO<span>//</span>NADO
+        </div>
+
+        <div class="stats">
+
+            <div>
+                ◈ ECOS:
+                <span id="ecoCount">0</span>
+            </div>
+
+            <div>
+                ✦ CAPÍTULO:
+                <span id="chapter">1</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MUNDO DEL JUEGO
+    ========================== -->
+
+    <main>
+
+        <section id="world">
+
+            <div id="particles"></div>
+
+            <!-- PERSONAJE -->
+
+            <div id="character">
+
+                <div class="head"></div>
+
+                <div class="body"></div>
+
+                <div class="legs"></div>
+
+            </div>
+
+
+            <!-- TELÉFONO -->
+
+            <div id="phone">
+
+                <div class="phoneTop">
+
+                    <span>9:41</span>
+
+                    <span>● ● ●</span>
+
+                </div>
+
+
+                <div class="appHeader">
+
+                    <strong>NODO</strong>
+
+                    <span>⌁</span>
+
+                </div>
+
+
+                <!-- PUBLICACIÓN -->
+
+                <div id="post">
+
+                    <div class="profile">
+
+                        <div class="avatar">
+                            M
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Milo Vega
+                            </strong>
+
+                            <small>
+                                hace 2 min
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="postText">
+
+                        Mi nuevo dibujo :)
+
+                    </div>
+
+
+                    <div class="drawing">
+
+                        ✦
+                        <span>◌</span>
+                        ✧
+
+                    </div>
+
+
+                    <div class="reactions">
+
+                        <button onclick="react('positive')">
+                            ♡
+                        </button>
+
+                        <button onclick="react('laugh')">
+                            😂
+                        </button>
+
+                        <button onclick="react('share')">
+                            ↗
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENSAJE GRANDE -->
+
+            <div id="message"></div>
+
+        </section>
+
+
+        <!-- =========================
+             PANEL NARRATIVO
+        ========================== -->
+
+        <section id="controls">
+
+            <div id="storyText">
+
+                <h1>
+                    Bienvenido a NODO
+                </h1>
+
+                <p>
+                    Una nueva publicación apareció en tu pantalla.
+                </p>
+
+                <button
+                    class="startButton"
+                    onclick="startGame()">
+
+                    ENTRAR A NODO
+
+                </button>
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <div
+                id="interactionButtons"
+                class="hidden">
+
+                <button onclick="react('positive')">
+
+                    ♡
+                    Me gusta
+
+                </button>
+
+
+                <button onclick="react('laugh')">
+
+                    😂
+                    Reírme
+
+                </button>
+
+
+                <button onclick="react('share')">
+
+                    ↗
+                    Compartir
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

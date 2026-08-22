@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Financiero: Jóvenes al Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE INICIO -->
+    <div id="inicio" class="pantalla activa">
+        <div class="inicio-contenido">
+
+            <div class="icono-dinero">💰</div>
+
+            <h1>Reto Financiero</h1>
+            <h2>Jóvenes al Control</h2>
+
+            <p>
+                Administra tu dinero durante 30 días,
+                toma buenas decisiones y alcanza tu meta de ahorro.
+            </p>
+
+            <div class="tarjeta-inicial">
+                <div>
+                    <span>💵 Presupuesto</span>
+                    <strong>Bs 1.500</strong>
+                </div>
+
+                <div>
+                    <span>🏦 Meta de ahorro</span>
+                    <strong>Bs 300</strong>
+                </div>
+            </div>
+
+            <button id="btnComenzar" class="btn-principal">
+                ▶ Comenzar
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- PANTALLA DEL JUEGO -->
+    <div id="juego" class="pantalla">
+
+        <header class="encabezado">
+            <div class="titulo-juego">
+                <span>💰</span>
+                <div>
+                    <h1>Reto Financiero</h1>
+                    <small>Jóvenes al Control</small>
+                </div>
+            </div>
+
+            <button id="btnReiniciar" class="btn-reiniciar">
+                ↻ Reiniciar
+            </button>
+        </header>
+
+
+        <!-- INFORMACIÓN -->
+        <section class="panel-estadisticas">
+
+            <div class="estadistica dinero">
+                <span class="estadistica-icono">💵</span>
+                <div>
+                    <small>Dinero disponible</small>
+                    <strong id="dinero">Bs 1.500</strong>
+                </div>
+            </div>
+
+            <div class="estadistica ahorro">
+                <span class="estadistica-icono">🏦</span>
+                <div>
+                    <small>Ahorro acumulado</small>
+                    <strong id="ahorro">Bs 0</strong>
+                </div>
+            </div>
+
+            <div class="estadistica">
+                <span class="estadistica-icono">📅</span>
+                <div>
+                    <small>Día</small>
+                    <strong id="dia">1 / 30</strong>
+                </div>
+            </div>
+
+            <div class="estadistica meta">
+                <span class="estadistica-icono">🎯</span>
+                <div>
+                    <small>Meta de ahorro</small>
+                    <strong>Bs 300</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- BARRA DE PROGRESO -->
+        <section class="progreso-contenedor">
+
+            <div class="progreso-texto">
+                <span>Progreso del mes</span>
+                <span id="porcentaje">0%</span>
+            </div>
+
+            <div class="barra">
+                <div id="barraProgreso"></div>
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAJE -->
+        <section class="personaje-area">
+
+            <div class="personaje">
+                <div class="cabello"></div>
+                <div class="cabeza">
+                    <span class="ojo izquierdo"></span>
+                    <span class="ojo derecho"></span>
+                    <span class="boca"></span>
+                </div>
+                <div class="cuerpo"></div>
+            </div>
+
+            <div class="estado-financiero">
+                <span>📊 Situación financiera</span>
+                <strong id="estadoFinanciero">Comenzando el mes...</strong>
+            </div>
+
+        </section>
+
+
+        <!-- SITUACIÓN -->
+        <main class="situacion">
+
+            <div class="numero-situacion">
+                SITUACIÓN <span id="numeroSituacion">1</span>
+            </div>
+
+            <h2 id="tituloSituacion">
+                Preparando tu primera decisión...
+            </h2>
+
+            <p id="descripcionSituacion"></p>
+
+            <div id="opciones" class="opciones"></div>
+
+        </main>
+
+
+        <!-- RETROALIMENTACIÓN -->
+        <div id="feedback" class="feedback oculto">
+
+            <div class="feedback-icono" id="feedbackIcono">💡</div>
+
+            <div class="feedback-contenido">
+                <h3 id="feedbackTitulo">Decisión registrada</h3>
+                <p id="feedbackTexto"></p>
+            </div>
+
+            <button id="btnContinuar" class="btn-continuar">
+                Continuar →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PANTALLA DE VICTORIA -->
+    <div id="victoria" class="pantalla resultado">
+
+        <div class="resultado-contenido">
+
+            <div class="resultado-icono">🏆</div>
+
+            <h1>¡Ganaste!</h1>
+
+            <h2>
+                Terminaste el mes administrando
+                responsablemente tu dinero.
+            </h2>
+
+            <div class="resultados">
+
+                <div>
+                    <span>💵 Dinero restante</span>
+                    <strong id="dineroFinalVictoria">Bs 0</strong>
+                </div>
+
+                <div>
+                    <span>🏦 Ahorro conseguido</span>
+                    <strong id="ahorroFinalVictoria">Bs 0</strong>
+                </div>
+
+                <div>
+                    <span>📅 Días completados</span>
+                    <strong id="diasFinalVictoria">30</strong>
+                </div>
+
+            </div>
+
+            <p class="mensaje-educativo">
+                Has demostrado que priorizar necesidades,
+                controlar gastos y ahorrar puede ayudarte
+                a alcanzar tus objetivos financieros.
+            </p>
+
+            <button id="btnJugarNuevamente" class="btn-principal">
+                🔄 Jugar nuevamente
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PANTALLA DE DERROTA -->
+    <div id="derrota" class="pantalla resultado">
+
+        <div class="resultado-contenido">
+
+            <div class="resultado-icono">😟</div>
+
+            <h1>Game Over</h1>
+
+            <h2>
+                Te quedaste sin dinero antes de terminar
+                el mes.
+            </h2>
+
+            <div class="resultados">
+
+                <div>
+                    <span>💵 Dinero restante</span>
+                    <strong id="dineroFinalDerrota">Bs 0</strong>
+                </div>
+
+                <div>
+                    <span>🏦 Ahorro conseguido</span>
+                    <strong id="ahorroFinalDerrota">Bs 0</strong>
+                </div>
+
+                <div>
+                    <span>📅 Días completados</span>
+                    <strong id="diasFinalDerrota">0</strong>
+                </div>
+
+            </div>
+
+            <p class="mensaje-educativo">
+                Revisa tus decisiones. Recuerda priorizar
+                las necesidades, comparar precios y evitar
+                las compras impulsivas.
+            </p>
+
+            <button id="btnIntentarNuevamente" class="btn-principal">
+                🔄 Intentar nuevamente
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>NutriAventura - El Reto Saludable</title>
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+ 
+    <!-- ==============================
+
+         PANTALLA PRINCIPAL
+
+    =============================== -->
+<div id="menuScreen" class="screen active">
+ 
+        <div class="menu-card">
+ 
+            <div class="logo">
+
+                🥗
+</div>
+ 
+            <h1>NutriAventura</h1>
+ 
+            <h2>El Reto Saludable</h2>
+ 
+            <p class="description">
+
+                ¡Pon a prueba tus conocimientos sobre alimentación saludable!
+</p>
+ 
+            <div class="instructions">
+ 
+                <div class="instruction">
+<span>🍎</span>
+<p>Recoge alimentos saludables</p>
+</div>
+ 
+                <div class="instruction">
+<span>🚫</span>
+<p>Evita los alimentos poco saludables</p>
+</div>
+ 
+                <div class="instruction">
+<span>⭐</span>
+<p>Consigue 100 puntos</p>
+</div>
+ 
+            </div>
+ 
+            <button id="startButton" class="main-button">
+
+                🎮 JUGAR
+</button>
+ 
+            <p class="controls-info">
+
+                ⬅️ ➡️ Usa las flechas o A / D para moverte
+</p>
+ 
+        </div>
+ 
+    </div>
+ 
+ 
+    <!-- ==============================
+
+         PANTALLA DEL JUEGO
+
+    =============================== -->
+<div id="gameScreen" class="screen">
+ 
+        <div class="game-container">
+ 
+            <!-- HEADER -->
+<header class="game-header">
+ 
+                <div class="header-item">
+<span class="header-icon">⭐</span>
+<div>
+<small>PUNTOS</small>
+<strong id="score">0</strong>
+</div>
+</div>
+ 
+                <div class="header-item">
+<span class="header-icon">❤️</span>
+<div>
+<small>VIDAS</small>
+<strong id="lives">❤️❤️❤️</strong>
+</div>
+</div>
+ 
+                <div class="header-item">
+<span class="header-icon">⏱️</span>
+<div>
+<small>TIEMPO</small>
+<strong id="timer">45</strong>
+</div>
+</div>
+ 
+            </header>
+ 
+ 
+            <!-- BARRA DE PROGRESO -->
+<div class="progress-container">
+ 
+                <div class="progress-label">
+<span>Progreso hacia la meta</span>
+<span id="progressText">0 / 100</span>
+</div>
+ 
+                <div class="progress-bar">
+<div id="progressFill"></div>
+</div>
+ 
+            </div>
+ 
+ 
+            <!-- MENSAJE EDUCATIVO -->
+<div id="message" class="game-message">
+
+                ¡Atrapa alimentos saludables!
+</div>
+ 
+ 
+            <!-- ÁREA DEL JUEGO -->
+<main id="gameArea">
+ 
+                <!-- Decoración -->
+<div class="cloud cloud-1">☁️</div>
+<div class="cloud cloud-2">☁️</div>
+<div class="cloud cloud-3">☁️</div>
+ 
+                <!-- Personaje -->
+<div id="player">
+ 
+                    <div class="player-head">
+
+                        🧒
+</div>
+ 
+                    <div class="player-body">
+
+                        👕
+</div>
+ 
+                </div>
+ 
+                <!-- Suelo -->
+<div class="ground"></div>
+ 
+            </main>
+ 
+ 
+            <!-- CONTROLES -->
+<div class="mobile-controls">
+ 
+                <button id="leftButton" class="control-button">
+
+                    ⬅️
+</button>
+ 
+                <div class="control-label">
+
+                    MOVER
+</div>
+ 
+                <button id="rightButton" class="control-button">
+
+                    ➡️
+</button>
+ 
+            </div>
+ 
+ 
+            <div class="game-tip">
+
+                💡 Recuerda: una alimentación variada y equilibrada ayuda a cuidar tu salud.
+</div>
+ 
+        </div>
+ 
+    </div>
+ 
+ 
+    <!-- ==============================
+
+         PANTALLA DE VICTORIA
+
+    =============================== -->
+<div id="winScreen" class="screen">
+ 
+        <div class="result-card win-card">
+ 
+            <div class="result-icon">
+
+                🏆
+</div>
+ 
+            <h1>¡Felicidades!</h1>
+ 
+            <h2>¡Superaste el reto saludable!</h2>
+ 
+            <div class="final-score-box">
+ 
+                <span>Tu puntuación</span>
+ 
+                <strong id="winScore">
+
+                    100
+</strong>
+ 
+                <small>puntos</small>
+ 
+            </div>
+ 
+            <p id="winMessage">
+
+                ¡Excelente trabajo! Aprendiste a identificar mejores opciones de alimentación.
+</p>
+ 
+            <button id="restartWinButton" class="main-button">
+
+                🔄 JUGAR DE NUEVO
+</button>
+ 
+            <button id="menuWinButton" class="secondary-button">
+
+                🏠 MENÚ PRINCIPAL
+</button>
+ 
+        </div>
+ 
+    </div>
+ 
+ 
+    <!-- ==============================
+
+         PANTALLA DE DERROTA
+
+    =============================== -->
+<div id="loseScreen" class="screen">
+ 
+        <div class="result-card lose-card">
+ 
+            <div class="result-icon">
+
+                💪
+</div>
+ 
+            <h1>¡Buen intento!</h1>
+ 
+            <h2>Puedes volver a intentarlo</h2>
+ 
+            <div class="final-score-box">
+ 
+                <span>Tu puntuación</span>
+ 
+                <strong id="loseScore">
+
+                    0
+</strong>
+ 
+                <small>puntos</small>
+ 
+            </div>
+ 
+            <p id="loseMessage">
+
+                Cada partida es una oportunidad para aprender.
+</p>
+ 
+            <button id="restartLoseButton" class="main-button">
+
+                🔄 INTENTAR DE NUEVO
+</button>
+ 
+            <button id="menuLoseButton" class="secondary-button">
+
+                🏠 MENÚ PRINCIPAL
+</button>
+ 
+        </div>
+ 
+    </div>
+ 
+ 
+    <script src="script.js"></script>
+ 
+</body>
+</html>
+ 
